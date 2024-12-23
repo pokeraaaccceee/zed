@@ -371,7 +371,7 @@ pub(crate) struct RequestFrameOptions {
     pub(crate) require_presentation: bool,
 }
 
-pub(crate) trait PlatformWindow: HasWindowHandle + HasDisplayHandle {
+pub trait PlatformWindow: HasWindowHandle + HasDisplayHandle {
     fn bounds(&self) -> Bounds<Pixels>;
     fn is_maximized(&self) -> bool;
     fn window_bounds(&self) -> WindowBounds;
